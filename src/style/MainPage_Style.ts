@@ -308,6 +308,7 @@ export const LoadingIcon = styled.img`
 // 에러 메세지
 export const ErrorStatusCard = styled.div`
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-block: 3vh;

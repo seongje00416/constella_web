@@ -76,7 +76,7 @@ export const AlbumMainPage = () => {
                 {albumList.map(([id, title, singer, group]) => (
                     <AlbumCard key={id} onClick={ () => handleAlbumClick( [id, title, singer, group] ) }>
                         <AlbumCardCover>
-                            <AlbumCardImage src={"src/assets/album/" + id + ".webp" } />
+                            <AlbumCardImage src={"https://constella-bucket.s3.ap-northeast-2.amazonaws.com/album/" + id + ".webp" } />
                         </AlbumCardCover>
                         <AlbumCardGroup>{group}</AlbumCardGroup>
                         <AlbumCardTitle>{title}</AlbumCardTitle>
@@ -90,7 +90,7 @@ export const AlbumMainPage = () => {
                     <ModalContent>
                         <ModalContentAlbumInfoWrapper>
                             <ModalImageContainer>
-                                <ModalImage src={`src/assets/album/${selectedAlbum[0]}.webp`} />
+                                <ModalImage src={`https://constella-bucket.s3.ap-northeast-2.amazonaws.com/album/${selectedAlbum[0]}.webp`} />
                             </ModalImageContainer>
                             <ModalInfo>
                                 <AlbumCardGroup>{selectedAlbum[3]}</AlbumCardGroup>

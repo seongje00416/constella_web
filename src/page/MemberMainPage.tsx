@@ -13,6 +13,7 @@ import {
 } from "../style/MemberMainPage_Style.ts";
 
 const MemberMainPage = () => {
+
     return (
         <MainContainer>
             <CenterContainer>
@@ -24,7 +25,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Mystic </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/ayatsuno_yuni.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/ayatsuno_yuni.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 아야츠노 유니 </MemberCardNameText>
@@ -35,7 +36,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Mystic </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/airi_kanna.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/airi_kanna.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 아이리 칸나 </MemberCardNameText>
@@ -51,7 +52,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Universe </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/shirayuki_hina.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/shirayuki_hina.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 시라유키 히나 </MemberCardNameText>
@@ -62,7 +63,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Universe </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/akane_lize.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/akane_lize.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 아카네 리제 </MemberCardNameText>
@@ -73,7 +74,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Universe </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/neneko_mashiro.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/neneko_mashiro.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 네네코 마시로 </MemberCardNameText>
@@ -84,7 +85,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Universe </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/arahashi_tabi.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/arahashi_tabi.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 아라하시 타비 </MemberCardNameText>
@@ -100,7 +101,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Cliché </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/tenko_shibuki.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/tenko_shibuki.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 텐코 시부키 </MemberCardNameText>
@@ -111,7 +112,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Cliché </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/aokumo_rin.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/aokumo_rin.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 아오쿠모 린 </MemberCardNameText>
@@ -122,7 +123,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Cliché </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/hanako_nana.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/hanako_nana.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 하나코 나나 </MemberCardNameText>
@@ -133,7 +134,7 @@ const MemberMainPage = () => {
                     <MemberCard>
                         <MemberCardSeason> Stellive Cliché </MemberCardSeason>
                         <MemberCardThumbnail>
-                            <MemberCardImage src="src/assets/member/yuzuha_riko.webp" />
+                            <MemberCardImage src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/yuzuha_riko.webp" />
                         </MemberCardThumbnail>
                         <MemberCardName>
                             <MemberCardNameText> 유즈하 리코 </MemberCardNameText>

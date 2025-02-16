@@ -176,7 +176,7 @@ export const MainPage = () => {
         return (
             <LoadingContainer>
                 <LoadingContentContainer>
-                    <LoadingIcon src="src/assets/icon/loading_icon.gif" />
+                    <LoadingIcon src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/icon/loading_icon.gif" />
                 </LoadingContentContainer>
                 <BottomInformationContainer>
 

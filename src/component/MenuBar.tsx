@@ -16,7 +16,7 @@ export const MenuBar = () => {
             { /* <MenuItem onClick={ () => navigate("/live") }> 방송 </MenuItem> */ }
             { /* <MenuItem onClick={ () => navigate("/announce") }> 소식 </MenuItem> */ }
             <MenuButton onClick={ () => navigate("/sitemap") }>
-                <MenuButtonIcon src="src/assets/icon/mobile_menu.png" />
+                <MenuButtonIcon src="https://constella-bucket.s3.ap-northeast-2.amazonaws.com/icon/mobile_menu.png" />
             </MenuButton>
         </MenuBarContainer>
     )

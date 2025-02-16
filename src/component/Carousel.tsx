@@ -35,7 +35,7 @@ const Carousel = () => {
             <SlideContainer currentSlide={currentSlide}>
                 {slides.map((slide) => (
                     <Slide key={slide.id} onClick={ () => window.open( slide.link ) }>
-                        <SlideImage src={slide.url} alt={slide.alt} />
+                        <SlideImage src={"https://constella-bucket.s3.ap-northeast-2.amazonaws.com/notice" + slide.url} alt={slide.alt} />
                     </Slide>
                 ))}
             </SlideContainer>
