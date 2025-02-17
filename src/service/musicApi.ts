@@ -26,11 +26,6 @@ export const getAllMusic = async (
     size: number,
     page: number
 ): Promise<MusicListResponse> => {
-    console.log('Full URL:', axiosInstance.getUri({
-        url: '/api/v1/song/musicAll',
-        params: { size, page }
-    }));
-
     const response: ApiResponse<MusicListResponse> = await axiosInstance.get(
         '/api/v1/song/musicAll',
         {
