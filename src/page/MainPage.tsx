@@ -56,7 +56,7 @@ const LiveStatusCards = ({ data }: { data: GlobalData }) => {
                 .map(([key, member]) => (
                     <LiveStatusCard key={key} onClick={() => window.open("https://chzzk.naver.com/live/" + member.liveKey, "_blank")}>
                         <LiveStatusCardThumbnail>
-                            <LiveStatusCardImage src={'http://ls-91460c8baf4f9b3eb8967e3f63fd09effefda507.cvuiscqyafew.ap-northeast-2.rds.amazonaws.com/member/' + member.fullName + '.webp'} />
+                            <LiveStatusCardImage src={'https://constella-bucket.s3.ap-northeast-2.amazonaws.com/member/' + member.fullName + '.webp'} />
                         </LiveStatusCardThumbnail>
                         <LiveStatusCardTextWrapper>
                             <LiveStatusCardTextName> {member.name} </LiveStatusCardTextName>
