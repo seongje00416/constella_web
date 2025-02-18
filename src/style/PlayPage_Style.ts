@@ -47,13 +47,13 @@ export const InformationContainer = styled.div`
 `
 export const InformationDescriptionWrapper = styled.div`
     width: 70%;
-    height: 35vh;
+    height: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         width: 90%;
-        height: 20vh;
     }
 `
 export const InformationDescriptionTitle = styled.div`

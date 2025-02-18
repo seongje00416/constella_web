@@ -14,6 +14,7 @@ import {
     LiveStatusCardThumbnail,
     LiveStatusContainer, LiveStatusTitle, LiveStatusWrapper, LoadingContainer, LoadingContentContainer, LoadingIcon,
     MainContainer,
+    ErrorStatusCard
 } from "../style/MainPage_Style.ts";
 
 import Carousel from "../component/Carousel.tsx";
@@ -25,6 +26,7 @@ import { Member } from "../type/Member.ts";
 import { Song, getMusicList } from "../service/musicApi.ts";
 import { NewMusicList, DebutMusicList, OriginalMusicList } from "../constants/MusicMainCategory.ts";
 import { NameCodeToKoreanName } from "../function/ConvertFunction.ts";
+import {createRoot} from "react-dom/client";
 
 // 데이터 타입 정의
 interface GlobalData {
@@ -165,7 +167,15 @@ const useGlobalData = () => {
 
 export const LiveStatusErrorCard = () => {
     const element = document.getElementById("LiveStatusCardWrapper");
-    if( element != null ) {element.innerHTML = "<ErrorStatusCard> 치지직 API에 문제가 생겨 생방송 정보를 조회하지 못했습니다. </ErrorStatusCard>";}
+
+    if (element != null) {
+        const root = createRoot(element);
+        root.render(
+            <ErrorStatusCard>
+                치지직 API에 문제가 생겨 생방송 정보를 조회하지 못했습니다.
+            </ErrorStatusCard>
+        );
+    }
 }
 
 export const MainPage = () => {
@@ -190,9 +200,9 @@ export const MainPage = () => {
             <CarouselContainer>
                 <Carousel />
             </CarouselContainer>
-            <LiveStatusContainer>
+            <LiveStatusContainer id="LiveStatusCardWrapper">
                 <LiveStatusTitle> 치지직 생방송 </LiveStatusTitle>
-                <LiveStatusWrapper id="LiveStatusCardWrapper">
+                <LiveStatusWrapper>
                     <LiveStatusCards data={data} />
                 </LiveStatusWrapper>
             </LiveStatusContainer>

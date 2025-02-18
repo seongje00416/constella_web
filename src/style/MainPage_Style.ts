@@ -20,7 +20,7 @@ export const MenuBarContainer = styled.div`
     align-items: center;
     background-color: white;
     width: 100vw;
-    height: 7vh;
+    height: 50px;
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -63,8 +63,9 @@ export const MenuButton = styled.div`
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         display: flex;
         position: absolute;
-        left: 90%;
-        top: 15px;
+        height: 100%;
+        right: 20px;
+        top: 10px;
     }
     
     &:hover {
@@ -76,23 +77,18 @@ export const MenuButtonIcon = styled.img`
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         display: flex;
-        width: 24px;
-        height: auto;
+        height: 30px;
     }
 `
 // 중상단 라이브 여부 확인 컨테이너
 export const LiveStatusContainer = styled.div`
     height: auto;
-    max-height: 60vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: whitesmoke;
-
-    @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        max-height: 50vh;
-    }
+    overflow: visible;
 `
 export const LiveStatusTitle = styled.div`
     justify-content: center;
@@ -107,6 +103,11 @@ export const LiveStatusTitle = styled.div`
         margin: 10px;
         font-size: 1.2rem;
     }
+
+    @media screen and ( max-width: ${ MobileBreakPoints.phone }) {
+        margin: 5px;
+        font-size: 1rem;
+    }
 `
 export const LiveStatusWrapper = styled.div`
     width: 80%;
@@ -118,7 +119,12 @@ export const LiveStatusWrapper = styled.div`
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         grid-template-columns: repeat(2, 1fr);
-        padding: 10px;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    @media screen and ( max-width: ${ MobileBreakPoints.phone }) {
+        grid-template-columns: repeat(1, 1fr);
     }
 `
 export const LiveStatusCard = styled.div`
@@ -129,7 +135,7 @@ export const LiveStatusCard = styled.div`
     justify-content: left;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        
+        justify-content: center;
     }
     
     &:hover {
@@ -158,6 +164,16 @@ export const LiveStatusCardTextWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
+        margin-inline: 0;
+        margin-block: 2px;
+    }
+
+    @media screen and ( max-width: ${ MobileBreakPoints.phone }) {
+        margin: 0;
+    }
+    
 `
 export const LiveStatusCardTextName = styled.div`
     font-weight: bold;
@@ -183,7 +199,7 @@ export const LiveStatusCardTextStatus = styled.div<LiveStatusProps>`
 export const CarouselContainer = styled.div`
     height: 55vh;
     background-color: lightgray;
-
+    
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         height: 30vh;
     }
@@ -196,14 +212,18 @@ export const ContentContainer = styled.div`
     align-items: center;
 `
 export const ContentWrapper = styled.div`
-    height: 35vh;
+    height: auto;
+    max-height: 100%;
     width: 80%;
     padding-left: 50px;
     overflow-x: auto;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        height: 33vh;
+        height: auto;
     }
     
     &::-webkit-scrollbar {
@@ -233,8 +253,8 @@ export const ContentTitle = styled.div`
 `
 export const ContentListContainer = styled.div`
     display: flex;
+    align-items: center;
     gap: 20px;
-    height: 100%;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         gap: 10px;
@@ -243,27 +263,23 @@ export const ContentListContainer = styled.div`
 export const ContentCard = styled.div`
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: 80%;
     border: 1px solid whitesmoke;
     border-radius: 5px;
+    height: 90%;
+    margin-bottom: 15px;
 
-    @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        height: 70%;
-    }
-    
     &:hover {
         cursor: pointer;
         opacity: 0.8;
     }
 `
 export const ContentCardThumbnail = styled.div`
-    
+    height: 70%;
 `
 export const ContentCardThumbnailImage = styled.img`
-    @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        width: 50vw;
-    }
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 `
 export const ContentCardTitle = styled.div`
     font-weight: bold;
@@ -308,10 +324,16 @@ export const LoadingIcon = styled.img`
 // 에러 메세지
 export const ErrorStatusCard = styled.div`
     display: flex;
-    width: 100%;
+    width: 100vw;
+    height: 10vh;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-block: 3vh;
     font-weight: bold;
     color: gray;
+
+    @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
+        font-size: 0.8rem;
+    }
 `

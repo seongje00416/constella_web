@@ -4,6 +4,7 @@ import { MobileBreakPoints } from "../../constants/MobileConstants.ts";
 export const CarouselContainer = styled.div`
   position: relative;
   height: 100%;
+  width: 100vw;  
   background-color: lightgray;
   overflow: hidden;
 `;
@@ -19,7 +20,7 @@ export const SlideContainer = styled.div<SlideProps>`
 `;
 
 export const Slide = styled.div`
-    min-width: 100%;
+    width: 100vw;
     height: 100%;
     flex-shrink: 0;
     display: flex;
@@ -32,6 +33,7 @@ export const Slide = styled.div`
 
 export const SlideImage = styled.img`
   width: auto;
+  max-width: 100%;  
   height: 100%;
   object-fit: cover;
 `;
