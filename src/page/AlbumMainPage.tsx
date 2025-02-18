@@ -59,7 +59,7 @@ export const AlbumMainPage = () => {
                         if( response.content[i-1].title === response.content[i].title ) {
                             modalMusics[modalMusics.length - 1][2].push( NameCodeToKoreanName( response.content[i].singer ) );
                         }
-                        else modalMusics.push( [response.content[i].id, response.content[i].title, [response.content[i].singer], response.content[i].youtubeID ] );
+                        else modalMusics.push( [response.content[i].id, response.content[i].title, [NameCodeToKoreanName( response.content[i].singer )], response.content[i].youtubeID ] );
                     }
                 }
                 setModalMusicList( modalMusics );
