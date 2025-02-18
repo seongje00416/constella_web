@@ -27,10 +27,13 @@ import { albumList } from "../constants/AlbumList.ts";
 import { useState } from "react";
 import {getAlbumMusic} from "../service/musicApi.ts";
 import { NameCodeToKoreanName } from "../function/ConvertFunction.ts";
+import { useNavigate } from "react-router-dom";
 
 export const AlbumMainPage = () => {
     const [selectedAlbum, setSelectedAlbum] = useState<[string, string, string, string] | null>(null);
     const [ modalMusicList, setModalMusicList] = useState<[number, string, string[], string][] | null>(null);
+
+    const navigate = useNavigate();
 
     const handleAlbumClick = (album: [string, string, string, string]) => {
         loadIncludedMusicList( album[3] );
@@ -102,7 +105,7 @@ export const AlbumMainPage = () => {
                             {
                                 modalMusicList != null ?
                                     modalMusicList.map( (music) => (
-                                    <ModalMusicListCard>
+                                    <ModalMusicListCard onClick={ () => navigate( "/play/" + music[0] )}>
                                         <ModalMusicListCardThumbnail>
                                             <ModalMusicListCardImage src={`https://img.youtube.com/vi/${music[3]}/mqdefault.jpg`} />
                                         </ModalMusicListCardThumbnail>
