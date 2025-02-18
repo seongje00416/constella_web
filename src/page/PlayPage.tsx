@@ -15,7 +15,7 @@ import {
 } from '../style/PlayPage_Style'
 import {useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getMusicDetail} from "../service/musicApi.ts";
+import {getMusicDetail, getSingWith} from "../service/musicApi.ts";
 import { NameCodeToKoreanName } from "../function/ConvertFunction.ts";
 import { Song } from "../service/musicApi.ts"
 import { MusicRecommendInList } from "../function/MusicRecommendFunction.ts";
@@ -44,13 +44,29 @@ export const PlayPage = () => {
 
         const fetchMusic = async () => {
             try {
+                // 재생할 음악에 대한 정보 세팅
                 const response = await getMusicDetail(Number(id));
 
                 if (!isSubscribed) return;
 
+                // 가수가 2명 이상일 경우
+                if( response.album === "Cover" ) {
+                    setSinger(NameCodeToKoreanName( response.singer ));
+                }
+                else {
+                    const singWith = await getSingWith( response.youtubeID );
+                    const singers:string[] = singWith.split(",");
+
+                    let artists = "";
+                    for( let i = 1; i < singers.length; i++ ) {
+                        artists += NameCodeToKoreanName( singers[i] ) + ", "
+                    }
+                    setSinger(artists);
+                }
+
                 setYoutubeID(response.youtubeID);
                 setTitle(response.title);
-                setSinger(response.singer);
+
                 setAlbum(response.album);
                 setDescription(response.description);
 
@@ -93,7 +109,7 @@ export const PlayPage = () => {
                 <InformationDescriptionWrapper>
                     <InformationDescriptionAlbum> { album } </InformationDescriptionAlbum>
                     <InformationDescriptionTitle> { title } </InformationDescriptionTitle>
-                    <InformationDescriptionText> { NameCodeToKoreanName(singer) } </InformationDescriptionText>
+                    <InformationDescriptionText> { singer } </InformationDescriptionText>
                     <InformationDescriptionTextString>
                         { description }
                     </InformationDescriptionTextString>
@@ -101,7 +117,9 @@ export const PlayPage = () => {
                 <InformationRelatedWrapper>
                     <InformationRelatedTitle> 추천 음악 </InformationRelatedTitle>
                     {
-                        recommends.map( (music) => (
+                        recommends
+                            .filter(music => music.album === "Cover")
+                            .map( (music) => (
                             <InformationRelatedCard onClick={ () => navigate( "/play/" + music.id ) }>
                                 <InformationRelatedCardThumbnail>
                                     <InformationRelatedCardThumbnailImage src={"https://img.youtube.com/vi/" + music.youtubeID + "/mqdefault.jpg"} />

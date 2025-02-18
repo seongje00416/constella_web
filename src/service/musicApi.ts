@@ -60,22 +60,6 @@ export const getMusicList = async (
     return response.data;
 }
 
-export const getMusic = async (
-    size: number,
-    page: number,
-    title: string,
-    singer: string,
-    album: string
-): Promise<MusicListResponse> => {
-    const response: ApiResponse<MusicListResponse> = await axiosInstance.get(
-        `/api/v1/song/music/music`,
-        {
-            params: { size, page, title, singer, album }
-        }
-    )
-    return response.data
-}
-
 export const getAlbumMusic = async (
     size: number,
     page: number,
@@ -100,6 +84,18 @@ export const getRelatedMusicList = async (
         `/api/v1/song/recommendMusics`,
         {
             params: { size, page, object, value }
+        }
+    )
+    return response.data;
+}
+
+export const getSingWith = async (
+    youtubeId: string
+): Promise<string> => {
+    const response: ApiResponse<string> = await axiosInstance.get(
+        '/api/v1/song/getSingWith',
+        {
+            params: { youtubeId }
         }
     )
     return response.data;

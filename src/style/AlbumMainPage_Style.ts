@@ -170,6 +170,11 @@ export const ModalMusicListCard = styled.div`
         align-items: center;
         justify-content: center;
     }
+    
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
 `
 export const ModalMusicListCardThumbnail = styled.div`
     width: 30%;
