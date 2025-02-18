@@ -6,6 +6,8 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     font-family: '나눔 고딕', -apple-system, 'Apple SD Gothic Neo', '맑은 고딕', 'Nanum Gothic', sans-serif;
+    background-color: white;
+    color: black;
 `
 
 // 중단 영상 재생 컨테이너
@@ -50,7 +52,7 @@ export const InformationDescriptionWrapper = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         width: 90%;

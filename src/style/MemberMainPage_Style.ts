@@ -6,6 +6,8 @@ export const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     font-family: '나눔 고딕', -apple-system, 'Apple SD Gothic Neo', '맑은 고딕', 'Nanum Gothic', sans-serif;
+    background-color: white;
+    color: black;
 `
 export const CenterContainer = styled.div`
     width: 85%;

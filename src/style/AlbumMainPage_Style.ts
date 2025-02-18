@@ -7,6 +7,8 @@ export const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    color: black;
     font-family: '나눔 고딕', -apple-system, 'Apple SD Gothic Neo', '맑은 고딕', 'Nanum Gothic', sans-serif;
 `
 
@@ -20,8 +22,8 @@ export const ContentContainer = styled.div`
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         grid-template-columns: repeat(1, minmax(200px, 1fr));
-        min-height: 350vh;
-        gap: 10px;
+        height: auto;
+        gap: 15px;
     }
 `
 export const AlbumCard = styled.div`

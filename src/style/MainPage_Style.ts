@@ -7,6 +7,8 @@ export const MainContainer = styled.div`
     width: 100vw;
     overflow-y: auto;
     font-family: '나눔 고딕', -apple-system, 'Apple SD Gothic Neo', '맑은 고딕', 'Nanum Gothic', sans-serif;
+    background-color: white;
+    color: black;
     
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         
@@ -19,6 +21,7 @@ export const MenuBarContainer = styled.div`
     position: sticky;
     align-items: center;
     background-color: white;
+    color: black;
     width: 100vw;
     height: 50px;
     top: 0;
@@ -224,6 +227,7 @@ export const ContentWrapper = styled.div`
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         height: auto;
+        padding-left: 0;
     }
     
     &::-webkit-scrollbar {
@@ -334,6 +338,6 @@ export const ErrorStatusCard = styled.div`
     color: gray;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 `

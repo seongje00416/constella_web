@@ -7,6 +7,8 @@ export const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
+    background-color: white;
 `
 
 export const SitemapMenuItem = styled.div`

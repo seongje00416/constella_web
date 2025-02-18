@@ -8,6 +8,8 @@ export const MainContainer = styled.div`
     justify-content: center;
     align-items: center;
     font-family: '나눔 고딕', -apple-system, 'Apple SD Gothic Neo', '맑은 고딕', 'Nanum Gothic', sans-serif;
+    background-color: white;
+    color: black;
 
     @media screen and ( max-width: ${ MobileBreakPoints.mobile }) {
         
