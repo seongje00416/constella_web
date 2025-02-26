@@ -8,7 +8,7 @@ import {
     MusicContainer,
     PageButton,
     PageSelector,
-} from "../style/MusicMainPage_Style"
+} from "../style/MusicMainPage_Style.ts"
 import { useEffect, useState } from "react";
 import { getAllMusic, Song } from "../service/musicApi.ts";
 import { useNavigate } from "react-router-dom";
@@ -45,7 +45,7 @@ export const MusicMainPage = () => {
             <MusicContainer>
                 {
                     musicList.map((music) => (
-                    <MusicCard key={music.id} onClick={ () => navigate("/play/" + music.id) } >
+                    <MusicCard key={music.id} onClick={ () => navigate("/constella/play/" + music.id) } >
                         <MusicCardThumbnail
                             src={`https://img.youtube.com/vi/${music.youtubeID}/mqdefault.jpg`}
                         />

@@ -105,7 +105,7 @@ export const AlbumMainPage = () => {
                             {
                                 modalMusicList != null ?
                                     modalMusicList.map( (music) => (
-                                    <ModalMusicListCard onClick={ () => navigate( "/play/" + music[0] )}>
+                                    <ModalMusicListCard onClick={ () => navigate( "/constella/play/" + music[0] )}>
                                         <ModalMusicListCardThumbnail>
                                             <ModalMusicListCardImage src={`https://img.youtube.com/vi/${music[3]}/mqdefault.jpg`} />
                                         </ModalMusicListCardThumbnail>

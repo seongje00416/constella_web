@@ -211,7 +211,7 @@ export const MainPage = () => {
                     <ContentTitle> 최근 나온 신곡 </ContentTitle>
                     <ContentListContainer>
                         {data.newMusicList.map((music) => (
-                            <ContentCard key={music.id} onClick={() => navigate("/play/" + music.id)}>
+                            <ContentCard key={music.id} onClick={() => navigate("/constella/play/" + music.id)}>
                                 <ContentCardThumbnail>
                                     <ContentCardThumbnailImage src={"https://img.youtube.com/vi/" + music.youtubeID + "/mqdefault.jpg"} />
                                 </ContentCardThumbnail>
@@ -225,7 +225,7 @@ export const MainPage = () => {
                     <ContentTitle> 멤버들의 오리지날 음악들 </ContentTitle>
                     <ContentListContainer>
                         {data.originalMusicList.map((music) => (
-                            <ContentCard key={music.id} onClick={() => navigate("/play/" + music.id)}>
+                            <ContentCard key={music.id} onClick={() => navigate("/constella/play/" + music.id)}>
                                 <ContentCardThumbnail>
                                     <ContentCardThumbnailImage src={"https://img.youtube.com/vi/" + music.youtubeID + "/mqdefault.jpg"} />
                                 </ContentCardThumbnail>
@@ -239,7 +239,7 @@ export const MainPage = () => {
                     <ContentTitle> 그녀들의 데뷔곡! </ContentTitle>
                     <ContentListContainer>
                         {data.debutMusicList.map((music) => (
-                            <ContentCard key={music.id} onClick={() => navigate("/play/" + music.id)}>
+                            <ContentCard key={music.id} onClick={() => navigate("/constella/play/" + music.id)}>
                                 <ContentCardThumbnail>
                                     <ContentCardThumbnailImage src={"https://img.youtube.com/vi/" + music.youtubeID + "/mqdefault.jpg"} />
                                 </ContentCardThumbnail>

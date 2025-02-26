@@ -1,29 +1,29 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MenuBar from "../component/MenuBar.tsx"
+import MenuBar from "../constella/component/MenuBar.tsx"
 
-import MainPage from "../page/MainPage.tsx";
-import MemberMainPage from "../page/MemberMainPage.tsx";
-import MusicMainPage from "../page/MusicMainPage.tsx";
-import AlbumMainPage from "../page/AlbumMainPage.tsx";
-import LiveMainPage from "../page/LiveMainPage.tsx";
-import AnnouncementMainPage from "../page/AnnouncementMainPage.tsx";
+import MainPage from "../constella/page/MainPage.tsx";
+import MemberMainPage from "../constella/page/MemberMainPage.tsx";
+import MusicMainPage from "../constella/page/MusicMainPage.tsx";
+import AlbumMainPage from "../constella/page/AlbumMainPage.tsx";
+import LiveMainPage from "../constella/page/LiveMainPage.tsx";
+import AnnouncementMainPage from "../constella/page/AnnouncementMainPage.tsx";
 
-import Sitemap from "../component/Sitemap.tsx";
-import PlayPage from "../page/PlayPage.tsx";
+import Sitemap from "../constella/component/Sitemap.tsx";
+import PlayPage from "../constella/page/PlayPage.tsx";
 
 const Router = () => {
     return (
         <BrowserRouter>
             <MenuBar />
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/member" element={ <MemberMainPage /> } />
-                <Route path="/music" element={ <MusicMainPage /> } />
-                <Route path="/album" element={ <AlbumMainPage /> } />
-                <Route path="/live" element={ <LiveMainPage /> } />
-                <Route path="/announce" element={ <AnnouncementMainPage /> } />
-                <Route path="/play/:id" element={ <PlayPage /> } />
-                <Route path="/sitemap" element={ <Sitemap /> } />
+                <Route path="/constella" element={<MainPage />} />
+                <Route path="/constella/member" element={ <MemberMainPage /> } />
+                <Route path="/constella/music" element={ <MusicMainPage /> } />
+                <Route path="/constella/album" element={ <AlbumMainPage /> } />
+                <Route path="/constella/live" element={ <LiveMainPage /> } />
+                <Route path="/constella/announce" element={ <AnnouncementMainPage /> } />
+                <Route path="/constella/play/:id" element={ <PlayPage /> } />
+                <Route path="/constella/sitemap" element={ <Sitemap /> } />
             </Routes>
         </BrowserRouter>
     )

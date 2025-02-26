@@ -6,7 +6,7 @@ import {
     Slide,
     SlideContainer,
     SlideImage
-} from "../style/component/Carousel_Style";
+} from "../style/component/Carousel_Style.ts";
 import { NoticeList } from "../constants/CarouselNoticeList.ts";
 
 const Carousel = () => {

@@ -12,7 +12,7 @@ import {
     InformationRelatedCardThumbnail, InformationRelatedCardThumbnailImage, InformationRelatedTitle,
     InformationRelatedWrapper,
     MainContainer
-} from '../style/PlayPage_Style'
+} from '../style/PlayPage_Style.ts'
 import {useParams, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getMusicDetail, getSingWith} from "../service/musicApi.ts";
@@ -120,7 +120,7 @@ export const PlayPage = () => {
                         recommends
                             .filter(music => music.album === "Cover")
                             .map( (music) => (
-                            <InformationRelatedCard onClick={ () => navigate( "/play/" + music.id ) }>
+                            <InformationRelatedCard onClick={ () => navigate( "/constella/play/" + music.id ) }>
                                 <InformationRelatedCardThumbnail>
                                     <InformationRelatedCardThumbnailImage src={"https://img.youtube.com/vi/" + music.youtubeID + "/mqdefault.jpg"} />
                                 </InformationRelatedCardThumbnail>

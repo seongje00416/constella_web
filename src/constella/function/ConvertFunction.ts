@@ -1,4 +1,4 @@
-import { Member } from "../constants/MemberConstants"
+import { Member } from "../constants/MemberConstants.ts"
 
 export const NameCodeToKoreanName = ( nameCode: string ):string => {
     if( nameCode == "" ) return "";

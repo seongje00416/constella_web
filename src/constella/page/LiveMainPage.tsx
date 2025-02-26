@@ -4,7 +4,7 @@ import {
     BottomContainer,
     LiveCard,
     LiveCardThumbnail, LiveCardImage, LiveCardTextWrapper, LiveCardTextTitle, LiveCardTextName
-} from '../style/LiveMainPage_Style'
+} from '../style/LiveMainPage_Style.ts'
 
 
 export const LiveMainPage = () => {
